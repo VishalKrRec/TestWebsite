@@ -1,0 +1,16 @@
+<!-- student_detail.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ student.name }} - Test Results</title>
+</head>
+<body>
+    <h1>{{ student.name }} - Test Results</h1>
+    <ul>
+    {% for result in student.testresult_set.all %}
+         <li>{{ result.test.subject.name }}({{ result.test.date }}) - {{ result.score }}</li>
+        <br>
+    {% endfor %}
+    </ul>
+</body>
+</html>
